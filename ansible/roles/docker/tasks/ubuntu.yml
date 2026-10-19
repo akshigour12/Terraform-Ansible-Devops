@@ -1,0 +1,11 @@
+---
+- name: Update Ubuntu package cache
+  ansible.builtin.apt:
+    update_cache: true
+
+- name: Install Docker on Ubuntu
+  ansible.builtin.apt:
+    name:
+      - docker.io
+      - docker-compose-v2
+    state: present

@@ -1,0 +1,7 @@
+---
+- name: Configure Docker on worker nodes
+  hosts: role_worker
+  become: true
+
+  roles:
+    - docker

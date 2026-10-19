@@ -1,0 +1,11 @@
+---
+- name: Update Debian package cache
+  ansible.builtin.apt:
+    update_cache: true
+
+- name: Install Docker on Debian
+  ansible.builtin.apt:
+    name:
+      - docker.io
+      - docker-compose
+    state: present
